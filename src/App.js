@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-import Header from "./components Header";
+import Header from "./components/Header";
 import Login from "./components/Login";
+import Checkout from "./components/Checkout";
+import { auth } from "./Firebase";
+import { useStateValue } from "./StateProvider";
 
 function App() {
-  
+  const [{},dispatch] = useStateValue();
   useEffect(() => {
     // will only run once when the app component loads...
 
@@ -40,6 +44,10 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/checkout">
+            <Header />
+            <Checkout />
           </Route>
         </Switch>
       </Router>
