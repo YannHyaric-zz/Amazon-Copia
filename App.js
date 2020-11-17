@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Login from "./components/Login";
