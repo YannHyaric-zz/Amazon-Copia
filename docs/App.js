@@ -35,13 +35,8 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <Router>
+    <Router>
         <Switch>
-          <Route path="/">
-            <Header />
-            <Home />
-          </Route>
           <Route path="/login">
             <Login />
           </Route>
@@ -49,9 +44,12 @@ function App() {
             <Header />
             <Checkout />
           </Route>
+          <Route path="/">
+            <Header />
+            <Home />
+          </Route>
         </Switch>
       </Router>
-    </div>
   );
 }
 export default App;
