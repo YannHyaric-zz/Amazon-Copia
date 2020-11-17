@@ -35,7 +35,8 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    
+    <Router basename='/'>
         <Switch>
           <Route path="/login">
             <Login />
